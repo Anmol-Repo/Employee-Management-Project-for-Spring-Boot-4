@@ -1,9 +1,21 @@
- .footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%; 
-    height: 50px;
-    background-color: black;
-    text-align: center;
-    color: rgb(227, 242, 255);
+/* Ensure the root element takes full screen height */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Flex item to push footer to the bottom */
+.main-content {
+  flex: 1;
+}
+
+/* Updated Footer styling */
+.footer {
+  height: 50px;
+  background-color: black;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

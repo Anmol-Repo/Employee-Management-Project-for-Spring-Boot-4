@@ -1,4 +1,5 @@
 import axios from "axios";
+import EmployeeComponent from "../components/EmployeeComponent";
 
 interface CreateEmployee {
     firstName: string;
@@ -21,3 +22,7 @@ export const createEmployee = (employee: CreateEmployee) => axios.post<Employee[
 
 export const getEmployee = (employeeId: number) => axios.get
 (REST_API_BASE_URL + '/'+ employeeId) ;
+
+export const updateEmployee = (employeeId: number, employee: Employee) => axios.put(REST_API_BASE_URL + '/' +  employeeId, employee) ;
+
+export const deleteEmployee = (EmployeeId: number)=>{ return axios.delete(REST_API_BASE_URL+'/'+EmployeeId)} ;

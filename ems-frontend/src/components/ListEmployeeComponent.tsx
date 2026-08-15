@@ -1,16 +1,13 @@
 import React , {useEffect, useState} from 'react'
 import { listEmployees } from '../services/EmployeeService'
-
-interface Employee {
-    id: number
-    firstName: string
-    lastName: string
-    email: string
-}
+import { useNavigate } from 'react-router-dom'
+import type { Employee } from '../services/EmployeeService'
 
 const ListEmployeeComponent = () => {
   
 const [employees, setEmployees] = useState<Employee[]>([]) 
+
+const navigator = useNavigate();
 
 useEffect(()=>{
   listEmployees().then((response)=>{
@@ -20,20 +17,30 @@ useEffect(()=>{
   })
 }, [])
 
+function addNewEmployee(){
+navigator('/add-employee')
+}
+
+function updateEmployee(id: number){
+    navigator(`/edit-employee/${id}`)
+
+}
 
   return (
     <div className='container'>
         <h2 className='text-centered'>List of Employees</h2>
-        <table className='table table-striped'>
+        <button className='btn btn-primary mb-2 ' onClick={addNewEmployee}>Add Employee</button>
+        <table className='table table-striped-columns table table-bordered'>
             <thead>
                 <tr>
                     <th>Employee Id</th>
                     <th>Employee First Name</th>
                     <th>Employee Last Name</th>
                     <th>Employee Email Id</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody className='table-group-divider'>
                 {
                     employees.map(employee => 
                         <tr key={employee.id}>
@@ -41,6 +48,7 @@ useEffect(()=>{
                             <td>{employee.firstName}</td>
                             <td>{employee.lastName}</td>
                             <td>{employee.email}</td>
+                            <td><button className='btn btn-info' onClick={()=>{updateEmployee(employee.id)}}>Update</button></td>
                         </tr>
                     )
                 }

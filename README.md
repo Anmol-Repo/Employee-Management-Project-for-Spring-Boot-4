@@ -43,13 +43,16 @@ frontend for interacting with those APIs.
 ## Project Structure
 
 ```text
-Employee-Management-System
+Employee-Management-Project-for-Spring-Boot-4
 │
 ├── backend
 │   └── Spring Boot application
 │
 └── frontend
-    └── React application
+│   └── React application
+│
+└── README.md
+
 ````
 ## Screenshots
 

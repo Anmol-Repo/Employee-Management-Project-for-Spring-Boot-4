@@ -1,59 +1,102 @@
 ````markdown
 # Employee Management System
 
-A full-stack Employee Management System built with Spring Boot and React. 
-The application provides REST APIs for managing employees and a React-based 
-frontend for interacting with those APIs.
+A full-stack Employee Management System built with **React, TypeScript, Spring Boot, and MySQL**. The application provides a RESTful backend and a responsive frontend for creating, viewing, updating, searching, and deleting employee records.
 
-## Features
+## 🚀 Live Demo
 
-- Add new employees
-- View all employees
+**[View Live Application](https://ems-platform.netlify.app/)**
+
+> Demo employee records use synthetic sample data generated with [Mockaroo](https://mockaroo.com/) for testing and demonstration purposes.
+
+## ✨ Features
+
+- Add employees
+- View and search employees
 - View employee details
 - Update employee information
 - Delete employees
+- Pagination
 - Form validation
 - Email validation
-- Pagination
-- Search employees
 - RESTful APIs
-- React frontend
-- Spring Boot backend
-- MySQL database
-- Frontend and backend communication using Axios
-- React Router for navigation
+- React Router navigation
+- Axios-based API communication
+- MySQL database integration
 
-## Tech Stack
-
-### Backend
-- Java
-- Spring Boot
-- Spring Data JPA
-- Hibernate
-- REST APIs
-- MySQL
+## 🛠️ Tech Stack
 
 ### Frontend
+
 - React
 - TypeScript
 - React Router
 - Axios
 - Bootstrap
+- Vite
 
-## Project Structure
+### Backend
 
-Employee-Management-Project-for-Spring-Boot-4
+- Java
+- Spring Boot
+- Spring Data JPA
+- Hibernate
+- REST APIs
+
+### Database & Deployment
+
+- MySQL
+- Aiven
+- Docker
+- Docker Hub
+- Render
+- Netlify
+
+## 🏗️ Architecture
+
+```text
+React + TypeScript
+        ↓
+      Axios
+        ↓
+Spring Boot REST API
+        ↓
+Spring Data JPA / Hibernate
+        ↓
+      MySQL
+````
+
+## ☁️ Deployment
+
+```text
+React + Vite
+     ↓
+  Netlify
+     ↓
+Spring Boot REST API
+     ↓
+   Render
+     ↓
+MySQL Database
+     ↓
+   Aiven
+```
+
+## 📁 Project Structure
+
+```text
+Employee-Management-Project
 │
-├── backend
+├── ems-backend
 │   └── Spring Boot application
 │
-├──  frontend
-│   └── React application
+├── ems-frontend
+│   └── React + TypeScript application
 │
 └── README.md
+```
 
-````
-## Screenshots
+## 📸 Screenshots
 
 ### Employee List
 
@@ -69,10 +112,11 @@ The update form allows existing employee information to be edited and submitted 
 
 ### Form Validation
 
-The form validates required fields and email format before submitting data to the backend.
+The application validates required fields and email format before submitting employee data.
+
 <img width="1920" height="1080" alt="Form Validation" src="https://github.com/user-attachments/assets/a3248c44-19d2-451e-9cbd-c0608a1a4417" />
 
-## API Endpoints
+## 🔌 API Endpoints
 
 | Method | Endpoint              | Description        |
 | ------ | --------------------- | ------------------ |
@@ -82,7 +126,7 @@ The form validates required fields and email format before submitting data to th
 | PUT    | `/api/employees/{id}` | Update employee    |
 | DELETE | `/api/employees/{id}` | Delete employee    |
 
-## How It Works
+## 🔄 How It Works
 
 The React frontend communicates with the Spring Boot backend through REST APIs.
 
@@ -98,45 +142,9 @@ Spring Data JPA
       MySQL
 ```
 
-## Running the Project
+## ✅ Validation
 
-### Backend
-
-1. Clone the repository.
-
-2. Open the backend project in your IDE.
-
-3. Configure your MySQL database in `application.properties`.
-
-4. Start the Spring Boot application.
-
-The backend will run on:
-
-```text
-http://localhost:8080
-```
-
-### Frontend
-
-1. Open the frontend directory.
-
-2. Install dependencies:
-
-```bash
-npm install
-```
-
-3. Start the React application:
-
-```bash
-npm run dev
-```
-
-The frontend will run on the local development server.
-
-## Validation
-
-The application performs frontend validation before sending employee data to the backend.
+The application performs validation before employee data is submitted.
 
 Examples:
 
@@ -147,21 +155,75 @@ Examples:
 
 Backend validation is also used to maintain data integrity.
 
-## Git Workflow
+## 💻 Running Locally
 
-The project was developed incrementally, with features committed and pushed to GitHub as they were completed.
+### Backend
 
-## Future Improvements
+1. Clone the repository.
+2. Open `ems-backend` in your IDE.
+3. Configure the required database environment variables.
+4. Start the Spring Boot application.
+
+The backend runs on:
+
+```text
+http://localhost:8080
+```
+
+### Frontend
+
+1. Open the `ems-frontend` directory.
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+## 🔐 Environment Variables
+
+The application uses environment variables for configuration. **Do not commit real credentials to the repository.**
+
+### Frontend
+
+```text
+VITE_API_URL=
+```
+
+### Backend
+
+```text
+DATASOURCE_URL=
+DATASOURCE_USER=
+DATASOURCE_PASSWORD=
+FRONTEND_URL=
+```
+
+## 🧪 Demo Data
+
+The employee records used in the live demonstration are **synthetic sample data generated with [Mockaroo](https://mockaroo.com/)**.
+
+Mockaroo was used to generate realistic-looking employee records for testing and demonstration purposes. **No real employee information is used.**
+
+## 🚀 Future Improvements
 
 * Authentication and authorization
-* JWT-based login
+* JWT-based authentication
 * Role-based access control
 * Improved error handling
 * Unit and integration testing
-* Deployment
+* Automated CI/CD
 
-## Author
+## 👨‍💻 Author
 
 **Anmol**
 
-Built as a full-stack learning project to practice Spring Boot, REST APIs, React, TypeScript, database integration, and Git.
+Built as a full-stack project to practice **React, TypeScript, Spring Boot, REST APIs, MySQL, Docker, cloud deployment, and database integration.**
+
+```
+```

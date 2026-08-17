@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="Screenshot (200)" src="https://github.com/user-attachments/assets/e291e2d3-da64-438c-b0ac-7b300494ff7c" /># Employee Management System
+# Employee Management System
 
 A full-stack Employee Management System built with **React, TypeScript, Spring Boot, and MySQL**. The application provides a RESTful backend and a responsive frontend for creating, viewing, updating, searching, and deleting employee records.
 

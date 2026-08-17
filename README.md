@@ -196,14 +196,6 @@ The employee records used in the live demonstration are **synthetic sample data 
 
 Mockaroo was used to generate realistic-looking employee records for testing and demonstration purposes. **No real employee information is used.**
 
-##  Future Improvements
-
-* Authentication and authorization
-* JWT-based authentication
-* Role-based access control
-* Improved error handling
-* Unit and integration testing
-* Automated CI/CD
 
 ##  Author
 

@@ -6,7 +6,8 @@ A full-stack Employee Management System built with **React, TypeScript, Spring B
 
 **[View Live Application](https://ems-platform.netlify.app/)**
 
-        > Demo employee records use synthetic sample data generated with [Mockaroo](https://mockaroo.com/) for testing and demonstration purposes.
+        > Demo employee records use synthetic sample data generated with [Mockaroo](https://mockaroo.com/) 
+          for testing and demonstration purposes.
 
 ##  Features
 

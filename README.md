@@ -52,20 +52,6 @@ A full-stack Employee Management System built with **React, TypeScript, Spring B
 - Render
 - Netlify
 
-##  Architecture
-
-```text
-React + TypeScript
-        ↓
-      Axios
-        ↓
-Spring Boot REST API
-        ↓
-Spring Data JPA / Hibernate
-        ↓
-      MySQL
-````
-
 ##  Deployment
 
 ```text
